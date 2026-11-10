@@ -1,0 +1,5 @@
+# Environnements virtuels et caches Python
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc

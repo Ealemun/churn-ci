@@ -1,0 +1,5 @@
+# Configuration de pytest : la racine du dépôt est ajoutée au chemin Python,
+# pour que « from churn.features import ... » fonctionne depuis tests/.
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

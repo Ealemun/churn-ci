@@ -1,0 +1,2 @@
+# Dépendances de développement (on ajoutera le ML à l'exercice 4)
+pytest==8.3.3
