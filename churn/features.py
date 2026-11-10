@@ -7,7 +7,7 @@ def tranche_anciennete(mois: int) -> str:
     # plutôt que de renvoyer une tranche fausse sans prévenir.
     if mois < 0:
         raise ValueError("L'ancienneté ne peut pas être négative")
-    if mois < 12:
+    if mois <= 12:
         return "nouveau"  # moins d'un an
     if mois < 36:
         return "etabli"  # entre 1 et 3 ans
