@@ -1,0 +1,22 @@
+name: CI
+
+on:                     # le déclencheur
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:                 # un job = une machine neuve
+    runs-on: ubuntu-latest
+    steps:              # exécutées dans l'ordre
+      - name: Checkout repository
+        uses: actions/checkout@v4       # action toute faite : récupère le code
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: pip install -r requirements.txt   # commande shell
+      - name: Run tests
+        run: pytest
